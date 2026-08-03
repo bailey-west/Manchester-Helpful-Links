@@ -9,7 +9,7 @@
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <!-- Google Fonts: Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
@@ -61,12 +61,8 @@
     <header class="fixed w-full top-0 z-50 glass transition-colors duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                <!-- Left: Weather -->
+                <!-- Left: Empty space to keep center title balanced -->
                 <div class="flex-1 flex items-center">
-                    <!-- Changed background to slate-800 text-white for better icon contrast in both modes -->
-                    <div id="weather-info" class="flex items-center text-sm font-medium bg-slate-800 text-white px-3 py-1 rounded-full transition-transform hover:scale-105 shadow-md">
-                        <i class="fa-solid fa-spinner fa-spin mr-2"></i> Loading...
-                    </div>
                 </div>
 
                 <!-- Center: Title -->
@@ -75,8 +71,8 @@
                         Helpful Links
                     </h1>
                     <a href="https://celestial.cable.comcast.com/knowledge/article-info/?query=240319165608377" target="_blank" rel="noopener noreferrer" 
-                       class="text-[10px] uppercase tracking-wider font-bold text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors animate-pulse">
-                       <i class="fa-solid fa-mobile-screen-button mr-1"></i>Active Mobile Promos
+                       class="text-[10px] uppercase tracking-wider font-bold text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors animate-pulse mt-0.5">
+                        <i class="fa-solid fa-mobile-screen-button mr-1"></i>Active Mobile Promos
                     </a>
                 </div>
 
@@ -101,7 +97,8 @@
             <input type="text" id="searchInput" 
                    class="block w-full pl-11 pr-4 py-4 bg-white dark:bg-darkcard border border-gray-200 dark:border-slate-700 rounded-2xl shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 dark:placeholder-gray-400 dark:text-white transition-all text-lg" 
                    placeholder="Search for tools, links, or contacts...">
-            <div id="noResultsMessage" class="hidden absolute top-full mt-2 w-full text-center text-gray-500 dark:text-gray-400 py-2">
+            <div id="noResultsMessage" class="hidden absolute top-full mt-4 w-full text-center text-gray-500 dark:text-gray-400 py-4 bg-white dark:bg-darkcard rounded-xl border border-gray-100 dark:border-slate-700 shadow-sm">
+                <i class="fa-solid fa-ghost text-2xl mb-2 text-gray-300 dark:text-slate-600 block"></i>
                 No results found.
             </div>
         </div>
@@ -118,17 +115,17 @@
                     <h2 class="text-lg font-bold text-gray-800 dark:text-white">Frontline Primary</h2>
                 </div>
                 <ul class="space-y-3">
-                    <li><a href="https://celestial.cable.comcast.com/knowledge/" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-book w-6 text-center text-gray-400 group-hover:text-indigo-500 transition-colors"></i> Celestial</a></li>
-                    <li><a href="https://retail360a.cable.comcast.com/login-nextgen#Layout=3" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-store w-6 text-center text-gray-400 group-hover:text-indigo-500 transition-colors"></i> Retail 360</a></li>
-                    <li><a href="https://einstein360a.cable.comcast.com/einstein_nxtgen#Layout=1" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-brain w-6 text-center text-gray-400 group-hover:text-indigo-500 transition-colors"></i> Einstein 360</a></li>
-                    <li><a href="https://comcast.infoquest.tv/home/" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-circle-question w-6 text-center text-gray-400 group-hover:text-indigo-500 transition-colors"></i> InfoQuest</a></li>
-                    <li><a href="https://comcast.medallia.com/sso/comcast/applications/" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-star w-6 text-center text-gray-400 group-hover:text-indigo-500 transition-colors"></i> Medallia</a></li>
-                    <li><a href="https://comcast.kronos.net/" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-clock w-6 text-center text-gray-400 group-hover:text-indigo-500 transition-colors"></i> Kronos</a></li>
-                    <li><a href="https://myperformance.comcast.net/performance/" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-chart-line w-6 text-center text-gray-400 group-hover:text-indigo-500 transition-colors"></i> myPerformance</a></li>
-                    <li><a href="https://wd5.myworkday.com/comcast/d/home.htmld" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-briefcase w-6 text-center text-gray-400 group-hover:text-indigo-500 transition-colors"></i> Workday</a></li>
-                    <li><a href="https://comcasthr.zendesk.com/hc/en-us" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-headset w-6 text-center text-gray-400 group-hover:text-indigo-500 transition-colors"></i> Ask HRSS</a></li>
-                    <li><a href="https://comcastcorp.sharepoint.com/sites/ComcastNow" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-newspaper w-6 text-center text-gray-400 group-hover:text-indigo-500 transition-colors"></i> Comcast Now</a></li>
-                    <li><a href="https://xoe-portal.cws.xfinity.com/portal" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-desktop w-6 text-center text-gray-400 group-hover:text-indigo-500 transition-colors"></i> XOE Portal</a></li>
+                    <li><a href="https://celestial.cable.comcast.com/knowledge/" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-book w-6 text-center text-gray-400 group-hover:text-indigo-500 transition-colors"></i> Celestial</a></li>
+                    <li><a href="https://retail360a.cable.comcast.com/login-nextgen#Layout=3" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-store w-6 text-center text-gray-400 group-hover:text-indigo-500 transition-colors"></i> Retail 360</a></li>
+                    <li><a href="https://einstein360a.cable.comcast.com/einstein_nxtgen#Layout=1" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-brain w-6 text-center text-gray-400 group-hover:text-indigo-500 transition-colors"></i> Einstein 360</a></li>
+                    <li><a href="https://comcast.infoquest.tv/home/" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-circle-question w-6 text-center text-gray-400 group-hover:text-indigo-500 transition-colors"></i> InfoQuest</a></li>
+                    <li><a href="https://comcast.medallia.com/sso/comcast/applications/" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-star w-6 text-center text-gray-400 group-hover:text-indigo-500 transition-colors"></i> Medallia</a></li>
+                    <li><a href="https://comcast.kronos.net/" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-clock w-6 text-center text-gray-400 group-hover:text-indigo-500 transition-colors"></i> Kronos</a></li>
+                    <li><a href="https://myperformance.comcast.net/performance/" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-chart-line w-6 text-center text-gray-400 group-hover:text-indigo-500 transition-colors"></i> myPerformance</a></li>
+                    <li><a href="https://wd5.myworkday.com/comcast/d/home.htmld" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-briefcase w-6 text-center text-gray-400 group-hover:text-indigo-500 transition-colors"></i> Workday</a></li>
+                    <li><a href="https://comcasthr.zendesk.com/hc/en-us" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-headset w-6 text-center text-gray-400 group-hover:text-indigo-500 transition-colors"></i> Ask HRSS</a></li>
+                    <li><a href="https://comcastcorp.sharepoint.com/sites/ComcastNow" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-newspaper w-6 text-center text-gray-400 group-hover:text-indigo-500 transition-colors"></i> Comcast Now</a></li>
+                    <li><a href="https://xoe-portal.cws.xfinity.com/portal" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-desktop w-6 text-center text-gray-400 group-hover:text-indigo-500 transition-colors"></i> XOE Portal</a></li>
                 </ul>
             </section>
 
@@ -141,20 +138,20 @@
                     <h2 class="text-lg font-bold text-gray-800 dark:text-white">Transactions & Forms</h2>
                 </div>
                 <ul class="space-y-3">
-                    <li><a href="https://comcast.brandsrv.com/AppLogin.aspx" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-tv w-6 text-center text-gray-400 group-hover:text-green-500 transition-colors"></i> Channel Lineup</a></li>
-                    <li><a href="https://abt.cable.comcast.com/" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-truck-fast w-6 text-center text-gray-400 group-hover:text-green-500 transition-colors"></i> ABT</a></li>
-                    <li><a href="https://housesmart.cable.comcast.com/" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-house-signal w-6 text-center text-gray-400 group-hover:text-green-500 transition-colors"></i> House SMaRT</a></li>
-                    <li><a href="https://fetchitup.comcast.com/#/login" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-magnifying-glass w-6 text-center text-gray-400 group-hover:text-green-500 transition-colors"></i> Fetch It Up</a></li>
-                    <li><a href="https://www.xfinityincentivetracker.com/track" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-gift w-6 text-center text-gray-400 group-hover:text-green-500 transition-colors"></i> Incentive Tracker</a></li>
-                    <li><a href="https://inseasonal.cable.comcast.com/home" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-plane-departure w-6 text-center text-gray-400 group-hover:text-green-500 transition-colors"></i> Seasonal Enrollment</a></li>
-                    <li><a href="https://www.comcastbizleads.com/EnhancedBusinessAdvantageHome" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-dollar-sign w-6 text-center text-gray-400 group-hover:text-green-500 transition-colors"></i> Business Leads</a></li>
-                    <li><a href="https://ecm.comcast.com/ecm" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-file-contract w-6 text-center text-gray-400 group-hover:text-green-500 transition-colors"></i> ECM</a></li>
-                    <li><a href="https://celestial.cable.comcast.com/knowledge/article-info/?query=200826155424716" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-qrcode w-6 text-center text-gray-400 group-hover:text-green-500 transition-colors"></i> QR Code Activation</a></li>
-                    <li><a href="https://www.xfinity.com/support/articles/streamsaver-offers-overview" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-play w-6 text-center text-gray-400 group-hover:text-green-500 transition-colors"></i> StreamSaver</a></li>
-                    <li><a href="https://einstein360.cable.comcast.com/proxy/assets/km/aem/comcast/residential/general/file-attachment/2021-09-09/Account%20Holder%20Deceased.pdf" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-file-lines w-6 text-center text-gray-400 group-hover:text-green-500 transition-colors"></i> Death Form</a></li>
-                    <li><a href="https://einstein360.cable.comcast.com/proxy/assets/km/aem/comcast/residential/general/file-attachment/2021-09-09/Transfer%20of%20Ownership.pdf" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-file-lines w-6 text-center text-gray-400 group-hover:text-green-500 transition-colors"></i> Transfer Form</a></li>
-                    <li><a href="https://einstein360.cable.comcast.com/proxy/assets/km/aem/comcast/residential/general/file-attachment/2021-09-09/Name%20Change.pdf" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-file-lines w-6 text-center text-gray-400 group-hover:text-green-500 transition-colors"></i> Name Change Form</a></li>
-                    <li><a href="https://app.smartsheet.com/b/form/db2b1ee2d8424fbb950c13fd2c18d332" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-mobile-button w-6 text-center text-gray-400 group-hover:text-green-500 transition-colors"></i> XM Credit Escalation</a></li>
+                    <li><a href="https://comcast.brandsrv.com/AppLogin.aspx" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-tv w-6 text-center text-gray-400 group-hover:text-green-500 transition-colors"></i> Channel Lineup</a></li>
+                    <li><a href="https://abt.cable.comcast.com/" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-truck-fast w-6 text-center text-gray-400 group-hover:text-green-500 transition-colors"></i> ABT</a></li>
+                    <li><a href="https://housesmart.cable.comcast.com/" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-house-signal w-6 text-center text-gray-400 group-hover:text-green-500 transition-colors"></i> House SMaRT</a></li>
+                    <li><a href="https://fetchitup.comcast.com/#/login" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-magnifying-glass w-6 text-center text-gray-400 group-hover:text-green-500 transition-colors"></i> Fetch It Up</a></li>
+                    <li><a href="https://www.xfinityincentivetracker.com/track" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-gift w-6 text-center text-gray-400 group-hover:text-green-500 transition-colors"></i> Incentive Tracker</a></li>
+                    <li><a href="https://inseasonal.cable.comcast.com/home" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-plane-departure w-6 text-center text-gray-400 group-hover:text-green-500 transition-colors"></i> Seasonal Enrollment</a></li>
+                    <li><a href="https://www.comcastbizleads.com/EnhancedBusinessAdvantageHome" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-dollar-sign w-6 text-center text-gray-400 group-hover:text-green-500 transition-colors"></i> Business Leads</a></li>
+                    <li><a href="https://ecm.comcast.com/ecm" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-file-contract w-6 text-center text-gray-400 group-hover:text-green-500 transition-colors"></i> ECM</a></li>
+                    <li><a href="https://celestial.cable.comcast.com/knowledge/article-info/?query=200826155424716" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-qrcode w-6 text-center text-gray-400 group-hover:text-green-500 transition-colors"></i> QR Code Activation</a></li>
+                    <li><a href="https://www.xfinity.com/support/articles/streamsaver-offers-overview" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-play w-6 text-center text-gray-400 group-hover:text-green-500 transition-colors"></i> StreamSaver</a></li>
+                    <li><a href="https://einstein360.cable.comcast.com/proxy/assets/km/aem/comcast/residential/general/file-attachment/2021-09-09/Account%20Holder%20Deceased.pdf" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-file-lines w-6 text-center text-gray-400 group-hover:text-green-500 transition-colors"></i> Death Form</a></li>
+                    <li><a href="https://einstein360.cable.comcast.com/proxy/assets/km/aem/comcast/residential/general/file-attachment/2021-09-09/Transfer%20of%20Ownership.pdf" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-file-lines w-6 text-center text-gray-400 group-hover:text-green-500 transition-colors"></i> Transfer Form</a></li>
+                    <li><a href="https://einstein360.cable.comcast.com/proxy/assets/km/aem/comcast/residential/general/file-attachment/2021-09-09/Name%20Change.pdf" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-file-lines w-6 text-center text-gray-400 group-hover:text-green-500 transition-colors"></i> Name Change Form</a></li>
+                    <li><a href="https://app.smartsheet.com/b/form/db2b1ee2d8424fbb950c13fd2c18d332" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-mobile-button w-6 text-center text-gray-400 group-hover:text-green-500 transition-colors"></i> XM Credit Escalation</a></li>
                 </ul>
             </section>
 
@@ -167,16 +164,16 @@
                     <h2 class="text-lg font-bold text-gray-800 dark:text-white">Operations</h2>
                 </div>
                 <ul class="space-y-3">
-                    <li><a href="https://idmsa.apple.com/" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-mobile-screen w-6 text-center text-gray-400 group-hover:text-orange-500 transition-colors"></i> Dcota</a></li>
-                    <li><a href="#" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-wifi w-6 text-center text-gray-400 group-hover:text-orange-500 transition-colors"></i> Clearpass</a></li>
-                    <li><a href="https://xisco.comcast.net/home/menu" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-boxes-stacked w-6 text-center text-gray-400 group-hover:text-orange-500 transition-colors"></i> XiSCO</a></li>
-                    <li><a href="https://rposportal.comcast.com/cash-drawer" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-cash-register w-6 text-center text-gray-400 group-hover:text-orange-500 transition-colors"></i> Cash Management</a></li>
-                    <li><a href="https://comcast.convergentcare.com/cmcst/demoDashboard.jsp" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-desktop w-6 text-center text-gray-400 group-hover:text-orange-500 transition-colors"></i> Kiosk Site</a></li>
-                    <li><a href="https://cceis.mintek.com/EISWeb/login.aspx" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-warehouse w-6 text-center text-gray-400 group-hover:text-orange-500 transition-colors"></i> Mintek</a></li>
-                    <li><a href="https://cceis.mintek.com/xInventory/dashboard" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-box w-6 text-center text-gray-400 group-hover:text-orange-500 transition-colors"></i> Xinventory</a></li>
-                    <li><a href="https://xvip.merchandising.cloud/view/login" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-tags w-6 text-center text-gray-400 group-hover:text-orange-500 transition-colors"></i> XVIP</a></li>
-                    <li><a href="https://app.smartsheet.com/b/publish?EQBCT=9e879ff68c05488ea264ff933fa0d5e9" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-credit-card w-6 text-center text-gray-400 group-hover:text-orange-500 transition-colors"></i> Verifone</a></li>
-                    <li><a href="https://connect.invue.com/login" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-lock w-6 text-center text-gray-400 group-hover:text-orange-500 transition-colors"></i> InVue Connect</a></li>
+                    <li><a href="https://idmsa.apple.com/" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-mobile-screen w-6 text-center text-gray-400 group-hover:text-orange-500 transition-colors"></i> Dcota</a></li>
+                    <li><a href="#" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-wifi w-6 text-center text-gray-400 group-hover:text-orange-500 transition-colors"></i> Clearpass</a></li>
+                    <li><a href="https://xisco.comcast.net/home/menu" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-boxes-stacked w-6 text-center text-gray-400 group-hover:text-orange-500 transition-colors"></i> XiSCO</a></li>
+                    <li><a href="https://rposportal.comcast.com/cash-drawer" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-cash-register w-6 text-center text-gray-400 group-hover:text-orange-500 transition-colors"></i> Cash Management</a></li>
+                    <li><a href="https://comcast.convergentcare.com/cmcst/demoDashboard.jsp" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-desktop w-6 text-center text-gray-400 group-hover:text-orange-500 transition-colors"></i> Kiosk Site</a></li>
+                    <li><a href="https://cceis.mintek.com/EISWeb/login.aspx" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-warehouse w-6 text-center text-gray-400 group-hover:text-orange-500 transition-colors"></i> Mintek</a></li>
+                    <li><a href="https://cceis.mintek.com/xInventory/dashboard" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-box w-6 text-center text-gray-400 group-hover:text-orange-500 transition-colors"></i> Xinventory</a></li>
+                    <li><a href="https://xvip.merchandising.cloud/view/login" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-tags w-6 text-center text-gray-400 group-hover:text-orange-500 transition-colors"></i> XVIP</a></li>
+                    <li><a href="https://app.smartsheet.com/b/publish?EQBCT=9e879ff68c05488ea264ff933fa0d5e9" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-credit-card w-6 text-center text-gray-400 group-hover:text-orange-500 transition-colors"></i> Verifone</a></li>
+                    <li><a href="https://connect.invue.com/login" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-lock w-6 text-center text-gray-400 group-hover:text-orange-500 transition-colors"></i> InVue Connect</a></li>
                 </ul>
             </section>
 
@@ -189,33 +186,33 @@
                     <h2 class="text-lg font-bold text-gray-800 dark:text-white">Management</h2>
                 </div>
                 <ul class="space-y-3">
-                    <li><a href="https://techspot.comcast.com/techspot?id=techspot_home_v2" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-screwdriver-wrench w-6 text-center text-gray-400 group-hover:text-purple-500 transition-colors"></i> TechSpot</a></li>
-                    <li><a href="https://mysupport.service-now.com/sp" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-circle-info w-6 text-center text-gray-400 group-hover:text-purple-500 transition-colors"></i> mySupport</a></li>
-                    <li><a href="https://mycomcastaccess.comcast.com/identityiq/home.jsf" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-id-card w-6 text-center text-gray-400 group-hover:text-purple-500 transition-colors"></i> MyComcastAccess</a></li>
-                    <li><a href="https://idlookup.cable.comcast.com/#/" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-magnifying-glass-plus w-6 text-center text-gray-400 group-hover:text-purple-500 transition-colors"></i> ID Lookup</a></li>
-                    <li><a href="https://comcast.myonlineordering.com/login.aspx" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-address-card w-6 text-center text-gray-400 group-hover:text-purple-500 transition-colors"></i> Business Cards</a></li>
-                    <li><a href="https://myexpense.comcast.com/reports" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-receipt w-6 text-center text-gray-400 group-hover:text-purple-500 transition-colors"></i> myExpense</a></li>
-                    <li><a href="https://employeerequest.cable.comcast.com/" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-user-check w-6 text-center text-gray-400 group-hover:text-purple-500 transition-colors"></i> Badge Request</a></li>
-                    <li><a href="https://ts4.comcast.com/" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i class="fa-solid fa-chart-pie w-6 text-center text-gray-400 group-hover:text-purple-500 transition-colors"></i> Tableau</a></li>
+                    <li><a href="https://techspot.comcast.com/techspot?id=techspot_home_v2" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-screwdriver-wrench w-6 text-center text-gray-400 group-hover:text-purple-500 transition-colors"></i> TechSpot</a></li>
+                    <li><a href="https://mysupport.service-now.com/sp" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-circle-info w-6 text-center text-gray-400 group-hover:text-purple-500 transition-colors"></i> mySupport</a></li>
+                    <li><a href="https://mycomcastaccess.comcast.com/identityiq/home.jsf" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-id-card w-6 text-center text-gray-400 group-hover:text-purple-500 transition-colors"></i> MyComcastAccess</a></li>
+                    <li><a href="https://idlookup.cable.comcast.com/#/" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-magnifying-glass-plus w-6 text-center text-gray-400 group-hover:text-purple-500 transition-colors"></i> ID Lookup</a></li>
+                    <li><a href="https://comcast.myonlineordering.com/login.aspx" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-address-card w-6 text-center text-gray-400 group-hover:text-purple-500 transition-colors"></i> Business Cards</a></li>
+                    <li><a href="https://myexpense.comcast.com/reports" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-receipt w-6 text-center text-gray-400 group-hover:text-purple-500 transition-colors"></i> myExpense</a></li>
+                    <li><a href="https://employeerequest.cable.comcast.com/" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-user-check w-6 text-center text-gray-400 group-hover:text-purple-500 transition-colors"></i> Badge Request</a></li>
+                    <li><a href="https://ts4.comcast.com/" target="_blank" class="flex items-center group text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 hover:translate-x-1"><i class="fa-solid fa-chart-pie w-6 text-center text-gray-400 group-hover:text-purple-500 transition-colors"></i> Tableau</a></li>
                 </ul>
             </section>
 
             <!-- Section: Important Contacts -->
-            <section class="bg-white dark:bg-darkcard rounded-2xl shadow-sm border border-gray-100 dark:border-slate-700 p-6 transition-all duration-300 card-hover filter-item md:col-span-2 xl:col-span-1">
+            <section class="bg-white dark:bg-darkcard rounded-2xl shadow-sm border border-gray-100 dark:border-slate-700 p-6 transition-all duration-300 card-hover filter-item">
                 <div class="flex items-center gap-3 mb-6 border-b border-gray-100 dark:border-slate-700 pb-4">
                     <div class="p-2 bg-red-100 dark:bg-red-900/30 rounded-lg text-red-600 dark:text-red-400">
                         <i class="fa-solid fa-address-book"></i>
                     </div>
                     <h2 class="text-lg font-bold text-gray-800 dark:text-white">Important Contacts</h2>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 gap-4">
+                <div class="grid grid-cols-1 gap-4">
                     <!-- Contact Item -->
                     <div class="flex justify-between items-center p-3 rounded-lg bg-gray-50 dark:bg-slate-800 hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors">
                         <div class="flex flex-col">
                             <span class="font-semibold text-sm">Mike Dube</span>
                             <a href="tel:6036613011" class="text-xs text-gray-500 dark:text-gray-400 hover:underline">(603) 661-3011</a>
                         </div>
-                        <button class="copy-btn text-gray-400 hover:text-indigo-500 transition-colors p-2" data-clipboard-text="603-661-3011">
+                        <button class="copy-btn text-gray-400 hover:text-indigo-500 transition-colors p-2" data-clipboard-text="603-661-3011" aria-label="Copy Number">
                             <i class="fa-solid fa-copy"></i>
                         </button>
                     </div>
@@ -225,7 +222,7 @@
                             <span class="font-semibold text-sm">Bailey West</span>
                             <a href="tel:8025572031" class="text-xs text-gray-500 dark:text-gray-400 hover:underline">(802) 557-2031</a>
                         </div>
-                        <button class="copy-btn text-gray-400 hover:text-indigo-500 transition-colors p-2" data-clipboard-text="802-557-2031">
+                        <button class="copy-btn text-gray-400 hover:text-indigo-500 transition-colors p-2" data-clipboard-text="802-557-2031" aria-label="Copy Number">
                             <i class="fa-solid fa-copy"></i>
                         </button>
                     </div>
@@ -235,7 +232,7 @@
                             <span class="font-semibold text-sm">Stephen Parker</span>
                             <a href="tel:6039323022" class="text-xs text-gray-500 dark:text-gray-400 hover:underline">(603) 932-3022</a>
                         </div>
-                        <button class="copy-btn text-gray-400 hover:text-indigo-500 transition-colors p-2" data-clipboard-text="603-932-3022">
+                        <button class="copy-btn text-gray-400 hover:text-indigo-500 transition-colors p-2" data-clipboard-text="603-932-3022" aria-label="Copy Number">
                             <i class="fa-solid fa-copy"></i>
                         </button>
                     </div>
@@ -245,7 +242,7 @@
                             <span class="font-semibold text-sm">Jeff Currier</span>
                             <a href="tel:6038673645" class="text-xs text-gray-500 dark:text-gray-400 hover:underline">(603) 867-3645</a>
                         </div>
-                        <button class="copy-btn text-gray-400 hover:text-indigo-500 transition-colors p-2" data-clipboard-text="603-867-3645">
+                        <button class="copy-btn text-gray-400 hover:text-indigo-500 transition-colors p-2" data-clipboard-text="603-867-3645" aria-label="Copy Number">
                             <i class="fa-solid fa-copy"></i>
                         </button>
                     </div>
@@ -260,15 +257,31 @@
                             <i class="fa-solid fa-copy"></i>
                         </button>
                     </div>
+                    <!-- Contact Item -->
                     <div class="flex justify-between items-center p-3 rounded-lg bg-gray-50 dark:bg-slate-800 hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors">
-                        <span class="text-sm font-medium">Security 101</span>
+                        <div class="flex flex-col">
+                            <span class="font-semibold text-sm">Peter Houlis</span>
+                            <span class="text-xs text-red-500 font-bold">Security</span>
+                            <a href="tel:6039312376" class="text-xs text-gray-500 dark:text-gray-400 hover:underline">(603) 931-2376</a>
+                        </div>
+                        <button class="copy-btn text-gray-400 hover:text-indigo-500 transition-colors p-2" data-clipboard-text="603-931-2376">
+                            <i class="fa-solid fa-copy"></i>
+                        </button>
+                    </div>
+                    <div class="flex justify-between items-center p-3 rounded-lg bg-gray-50 dark:bg-slate-800 hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors">
+                        <div class="flex flex-col">
+                            <span class="text-sm font-medium">Comcast Cable Security Operations Center</span>
+                            <span class="text-xs text-red-500 font-bold">Security</span>
+                        </div>
                         <div class="flex items-center">
-                            <span class="text-xs mr-2 text-gray-500">(800) 991-4170</span>
-                            <button class="copy-btn text-gray-400 hover:text-indigo-500" data-clipboard-text="800-991-4170"><i class="fa-solid fa-copy"></i></button>
+                            <span class="text-xs mr-2 text-gray-500">(267) 260-4357</span>
+                            <button class="copy-btn text-gray-400 hover:text-indigo-500" data-clipboard-text="267-260-4357"><i class="fa-solid fa-copy"></i></button>
                         </div>
                     </div>
              <!-- Section: Support Numbers -->
-             <section class="bg-white dark:bg-darkcard rounded-2xl shadow-sm border border-gray-100 dark:border-slate-700 p-6 transition-all duration-300 card-hover filter-item">
+            
+            <!-- Section: Support Numbers -->
+            <section class="bg-white dark:bg-darkcard rounded-2xl shadow-sm border border-gray-100 dark:border-slate-700 p-6 transition-all duration-300 card-hover filter-item">
                 <div class="flex items-center gap-3 mb-6 border-b border-gray-100 dark:border-slate-700 pb-4">
                     <div class="p-2 bg-blue-100 dark:bg-blue-900/30 rounded-lg text-blue-600 dark:text-blue-400">
                         <i class="fa-solid fa-headset"></i>
@@ -281,77 +294,77 @@
                         <span class="text-sm font-medium">Customer IVR</span>
                         <div class="flex items-center">
                             <span class="text-xs mr-2 text-gray-500">800-934-6489</span>
-                            <button class="copy-btn text-gray-400 hover:text-indigo-500" data-clipboard-text="800-934-6489"><i class="fa-solid fa-copy"></i></button>
+                            <button class="copy-btn text-gray-400 hover:text-indigo-500 transition-colors p-2" data-clipboard-text="800-934-6489" aria-label="Copy Number"><i class="fa-solid fa-copy"></i></button>
                         </div>
                     </div>
                     <div class="flex justify-between items-center p-3 rounded-lg bg-gray-50 dark:bg-slate-800 hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors">
                         <span class="text-sm font-medium">CB IVR</span>
                         <div class="flex items-center">
                             <span class="text-xs mr-2 text-gray-500">800-391-3000</span>
-                            <button class="copy-btn text-gray-400 hover:text-indigo-500" data-clipboard-text="800-391-3000"><i class="fa-solid fa-copy"></i></button>
+                            <button class="copy-btn text-gray-400 hover:text-indigo-500 transition-colors p-2" data-clipboard-text="800-391-3000" aria-label="Copy Number"><i class="fa-solid fa-copy"></i></button>
                         </div>
                     </div>
                     <div class="flex justify-between items-center p-3 rounded-lg bg-gray-50 dark:bg-slate-800 hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors">
                         <span class="text-sm font-medium">XM Support</span>
                         <div class="flex items-center">
                             <span class="text-xs mr-2 text-gray-500">888-934-6489</span>
-                            <button class="copy-btn text-gray-400 hover:text-indigo-500" data-clipboard-text="888-934-6489"><i class="fa-solid fa-copy"></i></button>
+                            <button class="copy-btn text-gray-400 hover:text-indigo-500 transition-colors p-2" data-clipboard-text="888-934-6489" aria-label="Copy Number"><i class="fa-solid fa-copy"></i></button>
                         </div>
                     </div>
                     <div class="flex justify-between items-center p-3 rounded-lg bg-gray-50 dark:bg-slate-800 hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors">
                         <span class="text-sm font-medium">CSA Fraud</span>
                         <div class="flex items-center">
                             <span class="text-xs mr-2 text-gray-500">844-335-8719</span>
-                            <button class="copy-btn text-gray-400 hover:text-indigo-500" data-clipboard-text="844-335-8719"><i class="fa-solid fa-copy"></i></button>
+                            <button class="copy-btn text-gray-400 hover:text-indigo-500 transition-colors p-2" data-clipboard-text="844-335-8719" aria-label="Copy Number"><i class="fa-solid fa-copy"></i></button>
                         </div>
                     </div>
                     <div class="flex justify-between items-center p-3 rounded-lg bg-gray-50 dark:bg-slate-800 hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors">
                         <span class="text-sm font-medium">Internet Essentials</span>
                         <div class="flex items-center">
                             <span class="text-xs mr-2 text-gray-500">855-846-8376</span>
-                            <button class="copy-btn text-gray-400 hover:text-indigo-500" data-clipboard-text="855-846-8376"><i class="fa-solid fa-copy"></i></button>
+                            <button class="copy-btn text-gray-400 hover:text-indigo-500 transition-colors p-2" data-clipboard-text="855-846-8376" aria-label="Copy Number"><i class="fa-solid fa-copy"></i></button>
                         </div>
                     </div>
                     <div class="flex justify-between items-center p-3 rounded-lg bg-gray-50 dark:bg-slate-800 hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors">
                         <span class="text-sm font-medium">COE Tier 2</span>
                         <div class="flex items-center">
                             <span class="text-xs mr-2 text-gray-500">866-461-0805</span>
-                            <button class="copy-btn text-gray-400 hover:text-indigo-500" data-clipboard-text="866-461-0805"><i class="fa-solid fa-copy"></i></button>
+                            <button class="copy-btn text-gray-400 hover:text-indigo-500 transition-colors p-2" data-clipboard-text="866-461-0805" aria-label="Copy Number"><i class="fa-solid fa-copy"></i></button>
                         </div>
                     </div>
                     <div class="flex justify-between items-center p-3 rounded-lg bg-gray-50 dark:bg-slate-800 hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors">
                         <span class="text-sm font-medium">CBM Pre/Post Sale</span>
                         <div class="flex items-center">
                             <span class="text-xs mr-2 text-gray-500">844-963-0210</span>
-                            <button class="copy-btn text-gray-400 hover:text-indigo-500" data-clipboard-text="844-963-0210"><i class="fa-solid fa-copy"></i></button>
+                            <button class="copy-btn text-gray-400 hover:text-indigo-500 transition-colors p-2" data-clipboard-text="844-963-0210" aria-label="Copy Number"><i class="fa-solid fa-copy"></i></button>
                         </div>
                     </div>
                     <div class="flex justify-between items-center p-3 rounded-lg bg-gray-50 dark:bg-slate-800 hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors">
                         <span class="text-sm font-medium">TPV</span>
                         <div class="flex items-center">
                             <span class="text-xs mr-2 text-gray-500">855-423-9888</span>
-                            <button class="copy-btn text-gray-400 hover:text-indigo-500" data-clipboard-text="855-423-9888"><i class="fa-solid fa-copy"></i></button>
+                            <button class="copy-btn text-gray-400 hover:text-indigo-500 transition-colors p-2" data-clipboard-text="855-423-9888" aria-label="Copy Number"><i class="fa-solid fa-copy"></i></button>
                         </div>
                     </div>
                     <div class="flex justify-between items-center p-3 rounded-lg bg-gray-50 dark:bg-slate-800 hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors">
                         <span class="text-sm font-medium">IVR Verbal Consent</span>
                         <div class="flex items-center">
                             <span class="text-xs mr-2 text-gray-500">844-963-0043</span>
-                            <button class="copy-btn text-gray-400 hover:text-indigo-500" data-clipboard-text="844-963-0043"><i class="fa-solid fa-copy"></i></button>
+                            <button class="copy-btn text-gray-400 hover:text-indigo-500 transition-colors p-2" data-clipboard-text="844-963-0043" aria-label="Copy Number"><i class="fa-solid fa-copy"></i></button>
                         </div>
                     </div>
                     <div class="flex justify-between items-center p-3 rounded-lg bg-gray-50 dark:bg-slate-800 hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors">
                         <span class="text-sm font-medium">Landline Porting</span>
                         <div class="flex items-center">
                             <span class="text-xs mr-2 text-gray-500">877-397-9734</span>
-                            <button class="copy-btn text-gray-400 hover:text-indigo-500" data-clipboard-text="877-397-9734"><i class="fa-solid fa-copy"></i></button>
+                            <button class="copy-btn text-gray-400 hover:text-indigo-500 transition-colors p-2" data-clipboard-text="877-397-9734" aria-label="Copy Number"><i class="fa-solid fa-copy"></i></button>
                         </div>
                     </div>
                     <div class="flex justify-between items-center p-3 rounded-lg bg-gray-50 dark:bg-slate-800 hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors">
                         <span class="text-sm font-medium">XM International</span>
                         <div class="flex items-center">
                             <span class="text-xs mr-2 text-gray-500">720-728-5462</span>
-                            <button class="copy-btn text-gray-400 hover:text-indigo-500" data-clipboard-text="720-728-5462"><i class="fa-solid fa-copy"></i></button>
+                            <button class="copy-btn text-gray-400 hover:text-indigo-500 transition-colors p-2" data-clipboard-text="720-728-5462" aria-label="Copy Number"><i class="fa-solid fa-copy"></i></button>
                         </div>
                     </div>
                 </div>
@@ -365,14 +378,14 @@
     </footer>
 
     <!-- Back to top -->
-    <button id="backToTopBtn" class="fixed bottom-6 right-6 bg-indigo-600 hover:bg-indigo-700 text-white p-3 rounded-xl shadow-lg transition-all duration-300 transform translate-y-20 opacity-0 z-40">
+    <button id="backToTopBtn" class="fixed bottom-6 right-6 bg-indigo-600 hover:bg-indigo-700 text-white p-3 rounded-xl shadow-lg transition-all duration-300 transform translate-y-20 opacity-0 z-40 focus:outline-none" aria-label="Back to Top">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
 
     <!-- Toast Notification -->
-    <div id="toast" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-slate-800 text-white px-4 py-2 rounded-lg shadow-xl flex items-center gap-2 transition-all duration-300 translate-y-20 opacity-0 z-50">
-        <i class="fa-solid fa-circle-check text-green-400"></i>
-        <span>Copied to clipboard!</span>
+    <div id="toast" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-slate-800 text-white px-4 py-3 rounded-lg shadow-xl flex items-center gap-3 transition-all duration-300 translate-y-20 opacity-0 z-50">
+        <i class="fa-solid fa-circle-check text-green-400 text-lg"></i>
+        <span class="font-medium">Copied to clipboard!</span>
     </div>
 
     <script>
@@ -446,7 +459,7 @@
                 }
             });
 
-            // --- Toast & Copy Logic ---
+            // --- Toast & Robust Copy Logic (iFrame Safe) ---
             const toast = document.getElementById('toast');
             let toastTimeout;
 
@@ -460,32 +473,31 @@
 
             document.querySelectorAll('.copy-btn').forEach(button => {
                 button.addEventListener('click', (e) => {
-                    // Prevent button click from triggering standard link behavior if nested
                     e.preventDefault(); 
                     const textToCopy = button.getAttribute('data-clipboard-text');
-                    navigator.clipboard.writeText(textToCopy).then(() => {
-                        showToast();
-                    }).catch(err => console.error('Failed to copy', err));
+                    
+                    // Uses a hidden text area + execCommand to guarantee it works in iframes and collaborative previews
+                    const textArea = document.createElement("textarea");
+                    textArea.value = textToCopy;
+                    textArea.style.position = "fixed";  // Prevent scrolling to bottom of page in MS Edge.
+                    document.body.appendChild(textArea);
+                    textArea.focus();
+                    textArea.select();
+                    
+                    try {
+                        const successful = document.execCommand('copy');
+                        if(successful) {
+                            showToast();
+                        } else {
+                            console.error('Fallback copy failed');
+                        }
+                    } catch (err) {
+                        console.error('Failed to copy', err);
+                    }
+                    
+                    document.body.removeChild(textArea);
                 });
             });
-
-            // --- Weather Widget ---
-            const apiKey = '0f19958b4004e882ae745df3f9823c80';
-            const lat = 44.4415; 
-            const lon = -73.1007;
-            const weatherDiv = document.getElementById('weather-info');
-
-            fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`)
-                .then(res => res.json())
-                .then(data => {
-                    if (data.weather) {
-                        const iconUrl = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
-                        weatherDiv.innerHTML = `<img src="${iconUrl}" class="w-6 h-6 mr-1" alt="Weather"> ${Math.round(data.main.temp)}°F, ${data.weather[0].main}`;
-                    }
-                })
-                .catch(() => {
-                    weatherDiv.innerHTML = `<i class="fa-solid fa-circle-exclamation mr-1"></i> N/A`;
-                });
 
             // --- Back to Top ---
             const backToTopBtn = document.getElementById('backToTopBtn');
